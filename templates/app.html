@@ -1,0 +1,253 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>PaperMint</title>
+    <link rel="icon" type="image/png" href="/static/logo.png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="app-page">
+    <div class="cursor-glow"></div>
+    <div id="cursor-glow"></div>
+    <div id="dots"></div>
+    <div id="loader-container">
+        <div id="loader-text">Loading...</div>
+        <div id="loader-bar"></div>
+    </div>
+
+    <div class="navbar">
+        <div class="brand">
+            <img src="/static/papermint-logo.png" class="brand-logo">
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/app">Get Started</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="hero-logo-wrapper">
+            <img src="/static/papermint-logo.png" class="hero-logo">
+        </div>
+        <p class="tagline">Ask the AI PDF Maker to create your document.</p>
+
+        <form id="generateForm" onsubmit="return false;">
+
+            <div class="main-input">
+                <textarea
+                    id="prompt"
+                    name="prompt"
+                    placeholder="Write an article about artificial intelligence."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="options">
+
+                <div class="left-options">
+
+                    <div class="template-group">
+
+                        <label for="template">Template: </label>
+
+                        <select id="template">
+                            <option value="article">Article</option>
+                            <option value="resume">Resume</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button type="button" onclick="generatePDF()">Generate PDF</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div id="toast" class="toast">Could not generate the document. Please try again.</div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PaperMint</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/static/logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body class="app-page">
+
+    <div id="cursor-glow"></div>
+
+    <div id="dots"></div>
+
+    <div id="loader-container">
+
+        <div id="loader-text">
+            Generating PDF...
+        </div>
+
+        <div id="loader-bar"></div>
+
+    </div>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <div class="navbar">
+
+        <div class="brand">
+
+            <img
+                src="/static/papermint-logo.png"
+                class="brand-logo"
+                alt="PaperMint Logo"
+            >
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/about">
+                About
+            </a>
+
+            <a href="/app">
+                Get Started
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <div class="container">
+
+        <div class="hero-logo-wrapper">
+
+            <img
+                src="/static/papermint-logo.png"
+                class="hero-logo"
+                alt="PaperMint"
+            >
+
+        </div>
+
+        <p class="tagline">
+            Ask the AI PDF Maker to create your document.
+        </p>
+
+        <!-- =========================
+             FORM
+        ========================== -->
+
+        <form
+            id="generateForm"
+            onsubmit="event.preventDefault(); generatePDF();"
+        >
+
+            <div class="main-input">
+
+                <textarea
+                    id="prompt"
+                    name="content"
+                    placeholder="Write an article about artificial intelligence."
+                    required
+                ></textarea>
+
+                <div class="options">
+
+                    <div class="left-options">
+
+                        <div class="template-group">
+
+                            <label for="template">
+                                Template
+                            </label>
+
+                            <select
+                                id="template"
+                                name="template_type"
+                            >
+
+                                <option value="article">
+                                    Article
+                                </option>
+
+                                <option value="resume">
+                                    Resume
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="generate-btn"
+                    >
+                        Generate PDF
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+        Could not generate the document.
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>

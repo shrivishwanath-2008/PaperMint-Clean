@@ -1,0 +1,30 @@
+\documentclass[12pt, a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+
+\geometry{top=3.0cm, bottom=3.0cm, left=3.5cm, right=2.0cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{$title}
+\author{$author}
+\date{$date}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+$content
+
+\end{document}
