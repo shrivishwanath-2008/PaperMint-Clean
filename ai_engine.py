@@ -524,7 +524,7 @@ def generate_all(prompt: str, template_type: str):
             f"{system_prompt}\n\nUSER REQUEST:\n{prompt}",
             generation_config={
                 "temperature": 0.2,
-                "max_output_tokens": 4000,
+                "max_output_tokens": 20000,
             }
         )
 
